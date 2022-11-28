@@ -3,10 +3,8 @@
 Работают с клоном "Altera USB-Blaster Rev. C", dfu, serial .
 
 Полезные ссылки ...
-PlatformIO Core (CLI) :
-	https://docs.platformio.org/en/stable/core/index.html
-Памятка по работе с OpenOCD :
-	https://github.com/evgeniy1294/memo/blob/master/openocd.md
+[PlatformIO Core (CLI) :](https://docs.platformio.org/en/stable/core/index.html)
+[Памятка по работе с OpenOCD :](https://github.com/evgeniy1294/memo/blob/master/openocd.md)
 Debugging Longan Nano :
 	https://wiki.sipeed.com/soft/longan/en/get_started/debug.html
 Altera USB-Blaster JTAG pinout :
