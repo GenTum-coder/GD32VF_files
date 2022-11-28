@@ -1,0 +1,31 @@
+
+~/.platformio/packages/tool-openocd-nuclei/bin/openocd -f interface/altera-usb-blaster.cfg -f target/gd32vf103.cfg
+
+1. Старт openocd:
+	~/.platformio/packages/tool-openocd-nuclei/bin/openocd -f interface/altera-usb-blaster.cfg -f target/gd32vf103.cfg
+	openocd -f interface/altera-usb-blaster.cfg -f target/gd32vf103.cfg
+2. Старт telnet:
+	telnet localhost 4444 (например в putty)
+3. Ввести командную строку:
+	program .pio/build/sipeed-longan-nano-lite/firmware.elf verify reset
+4. Выход с закрытием сеанса:
+	shutdown
+5. Останов:
+	halt
+6. Рестарт:
+	reset run
+7. Показать регистры (The target must be halted.):
+	reg
+7. Показать значение регистра (The target must be halted.):
+	reg <register>
+8. Изменить значение регистра (The target must be halted.):
+	reg <register> <value>
+9. Одиночный шаг:
+	step
+10. Displays a string identifying the version of this OpenOCD server :
+	version
+11. Show the devices that were found while scanning the JTAG chain:
+	scan_chain
+12. Продолжить выполнение [с адреса]:
+	resume [address]
+
