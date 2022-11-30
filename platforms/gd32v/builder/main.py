@@ -184,6 +184,13 @@ elif upload_protocol in debug_tools:
     openocd_args.extend([
         # "-c", "init; halt;",
         # "-c", "flash protect 0 0 last off; program {$SOURCE} verify; mww 0xe004200c 0x4b5a6978; mww 0xe0042008 0x01; resume; exit 0;"
+        # for GD32VF103 (gd32vf103.h)
+        # #define DBG_BASE              ((uint32_t)0xE0042000U)        /*!< DBG base address                 */
+        # /* DBG definitions */ (gd32vf103_dbg.h)
+        # #define DBG                      DBG_BASE
+        # /* registers definitions */
+        # #define DBG_ID                   REG32(DBG + 0x00U)         /*!< DBG_ID code register */
+        # #define DBG_CTL                  REG32(DBG + 0x04U)         /*!< DBG control register */
         "-c", "init; halt; flash protect 0 0 last off;",
         "-c", "program {$SOURCE} verify; reset; shutdown;"
     ])
